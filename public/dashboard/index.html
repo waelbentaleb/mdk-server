@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<html ng-app="adminApp" ng-controller="adminController">
+
+<head>
+
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>MDK Project</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+
+	<link rel="stylesheet" href="assets/css/semantic.min.css" />
+</head>
+
+<body class="sidebar-mini">
+
+	<button class="ui olive button" ng-click="home()">Home</button>
+	<button class="ui orange button"ng-click="logout()">Logout</button>
+
+	<br>
+	<br>
+	<div ng-view="">
+	</div>
+
+</body>
+
+<!-- JS Libs -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/semantic.min.js"></script>
+
+<!-- Angular JS Libs -->
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-route/angular-route.min.js"></script>
+<script src="lib/ng-dialog/js/ngDialog.min.js"></script>
+
+<!-- Angular JS Controllers -->
+<script src="app.js"></script>
+<script src="components/agents/agentsController.js"></script>
+<script src="components/controlPanel/controlPanelController.js"></script>
+<script src="components/screenshotReport/screenshotReportController.js"></script>
+<script src="components/keyloggerReport/keyloggerReportController.js"></script>
+
+</html>
