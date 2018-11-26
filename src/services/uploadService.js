@@ -23,17 +23,11 @@ const upload = multer({
 
 export default async (req, res, next) => {
   upload(req, res, async (err) => {
-    try {
-      if (err) {
-        console.log(err)
-        return res.status(500).json(err)
-      }
-
-      return next()
-
-    } catch (err) {
+    if (err) {
       console.log(err)
-      res.status(500).end()
+      return res.status(500).json(err)
     }
+
+    return next()
   })
 }

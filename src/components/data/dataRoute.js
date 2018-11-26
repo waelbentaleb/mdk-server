@@ -4,5 +4,5 @@ import { requireAuth } from '../../services/authServices'
 
 export default function (router) {
   router.get('/data/:agent/:type?/:lastData?', requireAuth, getData)
-  router.post('/:computerId', upload, postData) // current version use upload route name
+  router.post('/:computerId', upload, postData)
 }

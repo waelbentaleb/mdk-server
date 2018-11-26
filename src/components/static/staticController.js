@@ -12,7 +12,7 @@ export async function login(req, res, next) {
 
   } catch (error) {
     console.log(error)
-    return res.status(500).end()
+    return res.status(500).json(error)
   }
 
 }

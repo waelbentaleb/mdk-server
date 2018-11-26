@@ -9,7 +9,7 @@ export async function getAgents(req, res) {
   } catch (error) {
 
     console.log(error)
-    return res.status(500).end()
+    return res.status(500).json(error)
   }
 }
 
@@ -23,6 +23,6 @@ export async function lastUpdate(req, res) {
   } catch (error) {
 
     console.log(error)
-    return res.status(500).end()
+    return res.status(500).json(error)
   }
 }
